@@ -1,4 +1,14 @@
-.bg-image {
-  background-size: 150px,250px;
-  background: #3A3D57 url('src/assets/img/bg-deco-left.svg'), url('src/assets/img/bg-deco-right.svg') no-repeat fixed left bottom, right top;
+.page-container {
+  display: flex;
+  background: #efefef;
+  padding: 60px 0;
+  flex-grow: 1;
+}
+
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
