@@ -18,3 +18,25 @@ ul a {
   padding: 15px 35px;
   text-transform: uppercase;
 }
+
+menu {
+  width: 300px;
+}
+.logo {
+  width: 230px;
+}
+.logo:hover {
+  transition: 150ms;
+  -webkit-transform: scale3d(1.1,1.1,1);
+  transform: scale3d(1.1,1.1,1);
+}
+
+li a:hover {
+  color: #14cc76;
+  font-weight: 700;
+}
+
+.active-link {
+  color: #14cc76 !important;
+  font-weight: 700;
+}
