@@ -1,0 +1,4 @@
+.bg-image {
+  background-size: 150px,250px;
+  background: #3A3D57 url('src/assets/img/bg-deco-left.svg'), url('src/assets/img/bg-deco-right.svg') no-repeat fixed left bottom, right top;
+}
