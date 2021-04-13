@@ -1,1 +1,19 @@
-<p>article works!</p>
+<article>
+  <h2>{{articles.title}}</h2>
+  <div>
+    <p [innerHTML]="articles.intro"></p>
+  </div>
+  <div *ngFor="let img of articles.images">
+    <div class="image-wrapper">
+      <img [src]=img.large />
+    </div>
+  </div>
+  <div>
+    <p [innerHTML]="articles.body"></p>
+  </div>
+  <div>
+    <ul *ngFor="let tag of articles.tags">
+      <li>{{tag}}</li>
+    </ul>
+  </div>
+</article>
