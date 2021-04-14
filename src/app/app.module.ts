@@ -8,19 +8,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { ListComponent } from './components/list/list.component';
 import { ArticleComponent } from './components/article/article.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     SideMenuComponent,
     ListComponent,
-    ArticleComponent
+    ArticleComponent,
   ],
   imports: [
     BrowserModule,
     NgbModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

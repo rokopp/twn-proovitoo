@@ -12,3 +12,16 @@ body {
   height: 100%;
 }
 
+body {
+  line-height: 1;
+  margin: 0;
+}
+
+p {
+  font-size: 24px;
+  line-height: 150%;
+}
+
+article p {
+  margin: 40px 0!important;
+}

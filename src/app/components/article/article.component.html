@@ -1,1 +1,18 @@
-<p>article works!</p>
+<article class="d-block">
+  <h2 class="font-weight-bold ">{{articles.title}}</h2>
+  <div class="intro">
+    <p [innerHTML]="articles.intro"></p>
+  </div>
+  <div *ngFor="let img of articles.images">
+    <div class="image-wrapper" style="background-image: url({{img.large}})">
+    </div>
+  </div>
+  <div id="body" [innerHTML]="articles.body">
+
+  </div>
+  <div>
+    <ul class="list-unstyled d-inline" *ngFor="let tag of articles.tags">
+      <li class="d-inline mr-2"><span>{{tag}}</span></li>
+    </ul>
+  </div>
+</article>

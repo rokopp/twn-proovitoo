@@ -1,0 +1,42 @@
+.intro p {
+
+  font-weight: 700;
+}
+
+article h2 {
+  font-weight: 700;
+  font-size: 48px;
+  color: #14cc76;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 60px;
+}
+
+
+article p {
+  margin: 40px 0!important;
+}
+
+article .image {
+  height: auto;
+  width: 100%;
+}
+
+article .image-wrapper {
+  background: center center/cover no-repeat;
+  padding-bottom: 60%;
+  position: relative;
+}
+ul li {
+  display: inline;
+}
+ul li span {
+  display: inline-block;
+  padding: 5px 10px;
+  color: #fff;
+  background: #ff57a2;
+  border-radius: 99px;
+  margin-right: 10px;
+}
