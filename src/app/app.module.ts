@@ -9,6 +9,7 @@ import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { ListComponent } from './components/list/list.component';
 import { ArticleComponent } from './components/article/article.component';
 import { HttpClientModule } from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     NgbModule,
     RouterModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

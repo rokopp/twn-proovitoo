@@ -2,7 +2,10 @@
 <table>
   <thead>
   <tr>
-    <th *ngFor="let column of columnsToDisplay" scope="col">{{column}}</th>
+    <th *ngFor="let column of columnsToDisplay" scope="col">
+      {{column}}
+      <i class="fas fa-sort"></i>
+    </th>
   </tr>
   </thead>
   <tbody *ngFor="let element of list">
@@ -14,10 +17,10 @@
         {{element.surname}}
       </td>
       <td>
-        {{element.sex}}
+        {{checkSex(element.sex)}}
       </td>
       <td>
-        {{element.date  | date}}
+        {{element.date * 1000 | date: 'yyyy.MM.dd'}}
       </td>
       <td>
         {{element.phone}}
@@ -25,3 +28,9 @@
     </tr>
   </tbody>
 </table>
+<div class="d-flex justify-content-between p-2">
+  <ngb-pagination [collectionSize]="collectionSize" [ellipses]="ellipses"
+                  [rotate]="true" [(page)]="page" [pageSize]="pageSize"
+                  (pageChange)="refreshList()" [maxSize]="maxSize">
+  </ngb-pagination>
+</div>

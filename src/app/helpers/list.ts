@@ -1,7 +1,14 @@
 import {Images} from './article';
 export interface ListResponse {
-  stats: string[];
+  stats: Stats;
   list: List[];
+}
+
+export interface Stats {
+  total: number;
+  results: number;
+  offset: number;
+  limit: number;
 }
 
 export interface List {

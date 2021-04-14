@@ -17,6 +17,13 @@ body {
   margin: 0;
 }
 
+h1, h2, h3, h4, h5 {
+  margin: 60px 0;
+  font-family: Booster;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 p {
   font-size: 24px;
   line-height: 150%;
@@ -24,4 +31,24 @@ p {
 
 article p {
   margin: 40px 0!important;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+table th {
+  font-family: Booster;
+  color: #ff57a2;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-align: left;
+  cursor: pointer;
+}
+
+table td, table th {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
 }

@@ -15,7 +15,7 @@ export class ListService {
 
   constructor(private http: HttpClient) { }
 
-  getList(): Observable<ListResponse> {
+  getListResponse(): Observable<ListResponse> {
     return this.http.get<ListResponse>(this.listUrl);
   }
 }
