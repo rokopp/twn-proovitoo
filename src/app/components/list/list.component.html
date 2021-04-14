@@ -1,1 +1,27 @@
-<p>list works!</p>
+<h2>Nimekiri</h2>
+<table>
+  <thead>
+  <tr>
+    <th *ngFor="let column of columnsToDisplay" scope="col">{{column}}</th>
+  </tr>
+  </thead>
+  <tbody *ngFor="let element of list">
+    <tr>
+      <td>
+        {{element.firstname}}
+      </td>
+      <td>
+        {{element.surname}}
+      </td>
+      <td>
+        {{element.sex}}
+      </td>
+      <td>
+        {{element.date  | date}}
+      </td>
+      <td>
+        {{element.phone}}
+      </td>
+    </tr>
+  </tbody>
+</table>
