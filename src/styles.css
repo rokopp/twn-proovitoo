@@ -12,3 +12,6 @@ body {
   height: 100%;
 }
 
+article p {
+  margin: 40px 0!important;
+}

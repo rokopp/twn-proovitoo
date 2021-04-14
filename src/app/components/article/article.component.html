@@ -1,15 +1,14 @@
-<article>
-  <h2>{{articles.title}}</h2>
-  <div>
+<article class="d-block">
+  <h2 class="font-weight-bold ">{{articles.title}}</h2>
+  <div class="intro">
     <p [innerHTML]="articles.intro"></p>
   </div>
   <div *ngFor="let img of articles.images">
-    <div class="image-wrapper">
-      <img [src]=img.large />
+    <div class="image-wrapper" style="background-image: url({{img.large}})">
     </div>
   </div>
-  <div>
-    <p [innerHTML]="articles.body"></p>
+  <div id="body" [innerHTML]="articles.body">
+
   </div>
   <div>
     <ul *ngFor="let tag of articles.tags">
