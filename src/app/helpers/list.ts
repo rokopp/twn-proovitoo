@@ -28,4 +28,5 @@ export interface List {
   body: string;
   tags: string[];
   boolean: boolean;
+  expanded: boolean;
 }

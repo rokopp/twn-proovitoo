@@ -22,6 +22,8 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
     this.getListResponse();
     this.refreshList();
+    console.log(document.getElementsByClassName('clickable active'));
+
   }
 
   private getListResponse(): void {
@@ -45,5 +47,12 @@ export class ListComponent implements OnInit {
   checkSex(sex: string): string {
     if (sex === 'f') { return 'Naine'; }
     return 'Mees';
+  }
+  findDetails(data: List): List[] {
+    return this.list.filter(x => x.id === data.id);
+  }
+  check(): void {
+    console.log(document.getElementsByClassName('clickable active'));
+    console.log(document.getElementsByClassName('clickable active').length);
   }
 }

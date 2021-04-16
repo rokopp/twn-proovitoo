@@ -8,8 +8,9 @@
     </th>
   </tr>
   </thead>
-  <tbody *ngFor="let element of list">
-    <tr>
+  <tbody>
+  <ng-container *ngFor="let element of list">
+    <tr (click)="element.expanded = !element.expanded; check()" class="clickable" [class.active]="element.expanded">
       <td>
         {{element.firstname}}
       </td>
@@ -26,9 +27,25 @@
         {{element.phone}}
       </td>
     </tr>
+    <ng-container *ngIf="element.expanded">
+      <tr *ngFor="let details of findDetails(element)">
+        <td colspan="5">
+          <div class="person-info">
+            <div class="image">
+              <div class="image-wrapper" [style.background-image]="'url(' + details.images[0].medium + ')'">
+                <img [src]="details.images[0].medium"/>
+              </div>
+            </div>
+            <div class="content" [innerHTML]="details.intro">
+            </div>
+          </div>
+        </td>
+      </tr>
+    </ng-container>
+  </ng-container>
   </tbody>
 </table>
-<div class="d-flex justify-content-between p-2">
+<div class="d-flex justify-content-center p-2">
   <ngb-pagination [collectionSize]="collectionSize" [ellipses]="ellipses"
                   [rotate]="true" [(page)]="page" [pageSize]="pageSize"
                   (pageChange)="refreshList()" [maxSize]="maxSize">
