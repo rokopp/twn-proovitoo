@@ -17,6 +17,7 @@ export class ListComponent implements OnInit {
   listResponse: ListResponse;
   list: List[];
   letsContinue = false;
+  expandedList = [];
   constructor(private listService: ListService) {}
 
   ngOnInit(): void {
@@ -51,8 +52,15 @@ export class ListComponent implements OnInit {
   findDetails(data: List): List[] {
     return this.list.filter(x => x.id === data.id);
   }
-  check(): void {
-    console.log(document.getElementsByClassName('clickable active'));
-    console.log(document.getElementsByClassName('clickable active').length);
+  check(element: any): void {
+    if (this.expandedList.length === 1) {
+      this.expandedList.forEach(expanded => {
+        expanded.expanded = false;
+      });
+      this.expandedList = [];
+    }
+    if (this.expandedList.length === 0) {
+      this.expandedList.push(element);
+    }
   }
 }

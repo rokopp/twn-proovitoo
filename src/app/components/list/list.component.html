@@ -10,7 +10,7 @@
   </thead>
   <tbody>
   <ng-container *ngFor="let element of list">
-    <tr (click)="element.expanded = !element.expanded; check()" class="clickable" [class.active]="element.expanded">
+    <tr (click)="element.expanded = !element.expanded; check(element)" class="clickable" [class.active]="element.expanded">
       <td>
         {{element.firstname}}
       </td>
