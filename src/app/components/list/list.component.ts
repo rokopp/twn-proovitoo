@@ -23,8 +23,6 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
     this.getListResponse();
     this.refreshList();
-    console.log(document.getElementsByClassName('clickable active'));
-
   }
 
   private getListResponse(): void {
